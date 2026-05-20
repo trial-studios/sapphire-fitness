@@ -1,65 +1,287 @@
-import Image from "next/image";
+"use client";
+
+import { useLanguage } from "@/components/LanguageProvider";
+import MouseGlow from "@/components/MouseGlow";
+import FAQ from "@/components/FAQ";
+import Testimonials from "@/components/Testimonials";
+import Stats from "@/components/Stats";
+import Navbar from "@/components/Navbar";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 export default function Home() {
+    const { t } = useLanguage();
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+        <MouseGlow />
+
+      <Navbar />
+
+      {/* Hero Section */}
+      
+      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+
+        {/* Background Glow Effects */}
+
+       <div className="absolute left-[-120px] top-[-120px] h-[350px] w-[350px] rounded-full bg-cyan-500/20 blur-3xl" />
+
+       <div className="absolute bottom-[-120px] right-[-120px] h-[350px] w-[350px] rounded-full bg-blue-500/20 blur-3xl" />
+
+        <h1 className="max-w-5xl text-6xl font-extrabold leading-tight md:text-8xl">
+          {t.hero.title1}
+          <span className="text-cyan-400"> {t.hero.title2}</span>
+        </h1>
+
+        <p className="mt-6 max-w-2xl text-lg text-gray-400">
+          {t.hero.description}
+        </p>
+
+        <div className="mt-10 flex gap-4">
+
+          <button className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-black transition hover:scale-105">
+            {t.hero.join}
+          </button>
+
+          <button className="rounded-full border border-white/20 px-8 py-4 transition hover:border-cyan-400 hover:text-cyan-400">
+            {t.hero.explore}
+          </button>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+
+      </section>
+
+           {/* Membership Section */}
+
+        <Reveal>
+        <section className="px-6 py-24">
+
+  <div className="mx-auto max-w-7xl">
+
+    {/* Section Heading */}
+
+    <div className="text-center">
+
+      <h2 className="text-5xl font-bold">
+        Membership Plans
+      </h2>
+
+      <p className="mt-4 text-gray-400">
+        Choose the perfect training experience
+        tailored to your fitness journey.
+      </p>
+
     </div>
+
+    {/* Pricing Cards */}
+
+    <div className="mt-16 grid gap-8 md:grid-cols-3">
+
+      {/* Basic Plan */}
+
+      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition hover:-translate-y-2 hover:border-cyan-400">
+
+        <h3 className="text-3xl font-bold">
+          Basic
+        </h3>
+
+        <p className="mt-4 text-5xl font-extrabold">
+          ₹999
+        </p>
+
+        <ul className="mt-8 space-y-4 text-gray-300">
+
+          <li>✔ Access to all gym equipment</li>
+          <li>✔ Standard fitness programs</li>
+          <li>✔ Locker room access</li>
+          <li>✔ 5 training sessions</li>
+
+        </ul>
+
+        <button className="mt-10 w-full rounded-full bg-white py-3 font-semibold text-black transition hover:bg-cyan-400">
+          Get Started
+        </button>
+
+      </div>
+
+      {/* Pro Plan */}
+
+      <div className="rounded-3xl border border-cyan-400 bg-cyan-400/10 p-8 shadow-2xl shadow-cyan-500/20 backdrop-blur-md transition hover:-translate-y-2">
+
+        <div className="mb-4 inline-block rounded-full bg-cyan-400 px-4 py-1 text-sm font-semibold text-black">
+          MOST POPULAR
+        </div>
+
+        <h3 className="text-3xl font-bold">
+          Pro
+        </h3>
+
+        <p className="mt-4 text-5xl font-extrabold">
+          ₹2499
+        </p>
+
+        <ul className="mt-8 space-y-4 text-gray-300">
+
+          <li>✔ Personal trainer support</li>
+          <li>✔ Advanced diet plans</li>
+          <li>✔ Sauna access</li>
+          <li>✔ Unlimited training sessions</li>
+
+        </ul>
+
+        <button className="mt-10 w-full rounded-full bg-cyan-400 py-3 font-semibold text-black transition hover:scale-105">
+          Join Pro
+        </button>
+
+      </div>
+
+      {/* Elite Plan */}
+
+      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition hover:-translate-y-2 hover:border-cyan-400">
+
+        <h3 className="text-3xl font-bold">
+          Elite
+        </h3>
+
+        <p className="mt-4 text-5xl font-extrabold">
+          ₹4999
+        </p>
+
+        <ul className="mt-8 space-y-4 text-gray-300">
+
+          <li>✔ VIP fitness experience</li>
+          <li>✔ Private coaching</li>
+          <li>✔ Recovery lounge access</li>
+          <li>✔ Custom nutrition strategy</li>
+
+        </ul>
+
+        <button className="mt-10 w-full rounded-full bg-white py-3 font-semibold text-black transition hover:bg-cyan-400">
+          Become Elite
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+ </Reveal>
+
+        {/* Trainers Section */}
+
+<Reveal>
+<section className="px-6 py-24">
+
+  <div className="mx-auto max-w-7xl">
+
+    {/* Section Header */}
+
+    <div className="text-center">
+
+      <h2 className="text-5xl font-bold">
+        Meet Our Trainers
+      </h2>
+
+      <p className="mt-4 text-gray-400">
+        Elite coaches dedicated to pushing
+        your fitness journey beyond limits.
+      </p>
+
+    </div>
+
+    {/* Trainer Cards */}
+
+    <div className="mt-16 grid gap-8 md:grid-cols-3">
+
+      {/* Trainer 1 */}
+
+      <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-cyan-400">
+
+        <div className="h-[350px] bg-gradient-to-b from-cyan-500/20 to-black" />
+
+        <div className="p-6">
+
+          <h3 className="text-3xl font-bold">
+            Alex Carter
+          </h3>
+
+          <p className="mt-2 text-cyan-400">
+            Strength & Conditioning Coach
+          </p>
+
+          <p className="mt-4 text-gray-400">
+            Specialized in elite athletic performance,
+            muscle building, and recovery training.
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* Trainer 2 */}
+
+      <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-cyan-400">
+
+        <div className="h-[350px] bg-gradient-to-b from-blue-500/20 to-black" />
+
+        <div className="p-6">
+
+          <h3 className="text-3xl font-bold">
+            Sophia Blake
+          </h3>
+
+          <p className="mt-2 text-cyan-400">
+            HIIT & Fat Loss Expert
+          </p>
+
+          <p className="mt-4 text-gray-400">
+            Focused on endurance training,
+            fat-burning systems, and mobility development.
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* Trainer 3 */}
+
+      <div className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:border-cyan-400">
+
+        <div className="h-[350px] bg-gradient-to-b from-indigo-500/20 to-black" />
+
+        <div className="p-6">
+
+          <h3 className="text-3xl font-bold">
+            Marcus Kane
+          </h3>
+
+          <p className="mt-2 text-cyan-400">
+            Combat Fitness Specialist
+          </p>
+
+          <p className="mt-4 text-gray-400">
+            Professional combat conditioning coach
+            with advanced strength and agility programs.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</Reveal>
+
+          {/* Statistics Section */}
+
+        <Stats />
+        <Testimonials />
+        <FAQ />
+        <Footer />
+    </main>
   );
 }
