@@ -1,20 +1,47 @@
 # Sapphire Fitness 💎
 
-A futuristic premium fitness website built using Next.js, React, TailwindCSS, and Framer Motion.
+A futuristic premium fitness website built with Next.js, TailwindCSS, TypeScript, and Framer Motion.
 
-## Features
+## 🌍 Live Website
 
-- Responsive UI
-- Animated sidebar
-- Language switching
-- Interactive FAQ
-- Glitch 404 page
-- Mouse glow effects
-- Modern animations
+https://sapphire-fitness.trialwebsiteofficial.workers.dev/
 
-## Tech Stack
+## ✨ Features
+
+- Modern responsive UI
+- Animated hero sections
+- Mouse glow interaction
+- Multi-language support
+- Animated statistics cards
+- FAQ section
+- Testimonials section
+- Sidebar navigation
+- Custom 404 glitch page
+- Fully responsive design
+- Cloudflare deployment
+
+## 🛠 Tech Stack
 
 - Next.js
 - React
+- TypeScript
 - TailwindCSS
 - Framer Motion
+- Cloudflare Workers
+
+## 📸 Preview
+
+(Add screenshots here later)
+
+## 🚀 Installation
+
+```bash
+npm install
+npm run dev```
+
+## 🧠 Project Purpose
+
+Sapphire Fitness was created as a modern premium gym/fitness landing page focused on high-end UI/UX design, responsiveness, animations, and scalable frontend architecture.
+
+## 👨‍💻 Developed By
+  Trial Studios
