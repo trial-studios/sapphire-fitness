@@ -37,7 +37,8 @@ https://sapphire-fitness.trialwebsiteofficial.workers.dev/
 
 ```bash
 npm install
-npm run dev```
+npm run dev
+```
 
 ## 🧠 Project Purpose
 
