@@ -32,19 +32,19 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
 
-          <a href="#" className="transition hover:text-cyan-400">
+          <a href="/" className="transition hover:text-cyan-400">
             {t.navbar.home}
           </a>
 
-          <a href="#" className="transition hover:text-cyan-400">
+          <a href="/memberships" className="transition hover:text-cyan-400">
             {t.navbar.memberships}
           </a>
 
-          <a href="#" className="transition hover:text-cyan-400">
+          <a href="/trainers" className="transition hover:text-cyan-400">
             {t.navbar.trainers}
           </a>
 
-          <a href="#" className="transition hover:text-cyan-400">
+          <a href="/contact" className="transition hover:text-cyan-400">
             {t.navbar.contact}
           </a>
 
@@ -142,15 +142,15 @@ export default function Navbar() {
                 {t.navbar.home}
               </a>
 
-              <a href="#" className="transition hover:text-cyan-400">
+              <a href="/memberships" className="transition hover:text-cyan-400">
                 {t.navbar.memberships}
               </a>
 
-              <a href="#" className="transition hover:text-cyan-400">
+              <a href="/trainers" className="transition hover:text-cyan-400">
                 {t.navbar.trainers}
               </a>
 
-              <a href="#" className="transition hover:text-cyan-400">
+              <a href="/contact" className="transition hover:text-cyan-400">
                 {t.navbar.contact}
               </a>
 

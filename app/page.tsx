@@ -1,13 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/components/LanguageProvider";
-import MouseGlow from "@/components/MouseGlow";
-import FAQ from "@/components/FAQ";
-import Testimonials from "@/components/Testimonials";
-import Stats from "@/components/Stats";
-import Navbar from "@/components/Navbar";
-import Reveal from "@/components/Reveal";
-import Footer from "@/components/Footer";
+import MouseGlow from "@/components/ui/MouseGlow";
+import FAQ from "@/components/sections/FAQ";
+import Testimonials from "@/components/sections/Testimonials";
+import Stats from "@/components/sections/Stats";
+import Navbar from "@/components/layout/Navbar";
+import Reveal from "@/components/ui/Reveal";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
     const { t } = useLanguage();
