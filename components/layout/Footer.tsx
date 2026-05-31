@@ -23,28 +23,28 @@ export default function Footer() {
         <div className="flex gap-6 text-gray-400">
 
           <a
-            href="#"
+            href="/"
             className="transition hover:text-cyan-400"
           >
             Home
           </a>
 
           <a
-            href="#"
+            href="/memberships"
             className="transition hover:text-cyan-400"
           >
             Memberships
           </a>
 
           <a
-            href="#"
+            href="trainers"
             className="transition hover:text-cyan-400"
           >
             Trainers
           </a>
 
           <a
-            href="#"
+            href="contact"
             className="transition hover:text-cyan-400"
           >
             Contact
